@@ -42,7 +42,7 @@ The School Management System is a web-based application built using the MERN (Mo
 # Installation
 
 ```sh
-git clone https://github.com/Yogndrr/MERN-School-Management-System.git
+git clone https://github.com/abdurahim-H/MERN-School-Management-System.git
 ```
 Open 2 terminals in separate windows/tabs.
 
@@ -70,6 +70,27 @@ npm start
 Now, navigate to `localhost:3000` in your browser. 
 The Backend API will be running at `localhost:5000`.
 <br>
+# Docker (self-contained) Run
+
+```sh
+docker compose up --build
+```
+
+This starts MongoDB, the backend, and the frontend. After it finishes:
+
+- Frontend: `http://localhost:3000`
+- Backend API: `http://localhost:5050`
+
+No local Node or MongoDB installs are required beyond Docker/Compose.
+
+To stop the stack:
+
+```sh
+docker compose down
+```
+
+If ports are occupied, edit `docker-compose.yml` to change the published ports under the `frontend` and `backend` services.
+
 # Error Solution
 
 You might encounter an error while signing up, either a network error or a loading error that goes on indefinitely.
